@@ -1,0 +1,154 @@
+@import './variables.scss';
+@import './header.scss';
+@import './form.scss';
+@import './footer.scss';
+@import './splash.scss';
+@import './card.scss';
+@import './about.scss';
+
+body {
+    background-color: $background-color-page;
+    height:100vh;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+    /* 'Source Sans Pro', sans-serif */
+
+    /* Flex Display for sticky header / footer */
+    display:flex; 
+    flex-direction:column;
+}
+
+header{ 
+    min-height:8em; 
+    display: block;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Column Data */
+.cols {
+    display: inline-grid;
+    grid-template-columns: 15fr 475px;
+    grid-gap: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    color: #010101; /* #4497e2 */
+    font-size: 120%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.leftCol {
+    padding: 1em;
+    border-right: 1px solid #79b8c9; 
+}
+
+.rightCol {
+    width: 100%;
+    text-align: left;
+    padding: 1em 3em;
+}
+
+.contactList {
+    color: #4497e2;
+    list-style-type: none;
+    list-style-image: url(../../images/bullet.png);
+    font-size: 120%;
+}
+
+.contactList li {
+    margin: 9px 0;
+}
+
+.mainHome {
+    width: 100%;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #4497e2;
+    
+    .mainTitle {
+        font-size: 58px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 160%;
+    }
+    
+}
+
+.mainCols {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    color: #010101; /* #4497e2 */
+    font-size: 120%;
+    justify-items: center;
+    box-sizing: border-box;
+
+    .col {
+        margin: 1em 2em;
+        cursor: pointer;
+
+        .homeImage {
+            width: 300px;
+            height: 300px;
+
+            margin-bottom: 1em;
+
+            -webkit-background-size: cover;
+            -moz-background-size: center cover;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10%;
+        }
+
+        a:link, a:visited {
+            color: #4497e2;
+            margin: 1em;
+            text-align: center;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 500;
+          }
+          
+          a:hover, a:active {
+            color: #7ab7ec;
+          }
+    }
+
+    .col:hover {
+        margin: 0.25em 2em;
+    }
+}
+
+.mainReferral {
+    font-size: 30px;
+    margin: 32px 6px;
+
+    .referralContainer {
+        margin: 60px 40px;
+    }
+
+    a:link, a:visited {
+        color: #4497e2;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+    }
+      
+    a:hover, a:active {
+        color: #7ab7ec;
+    }
+}
+
+hr {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(68, 151, 226, 0), rgba(68, 151, 226, 0.75), rgba(68, 151, 226, 0));
+}

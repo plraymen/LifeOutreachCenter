@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <title>Contact</title>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/header.js"></script>
+</head>
+
+<body>
+    <%- include('includes/header'); %>
+    <br>
+    <article class = "centered">
+        <div class = "cols right">
+            <div class = "leftCol centered">
+                <h2>Contact Us</h2>
+                <br>
+                <form style = "text-align: center;">
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <input type="text" id="email" name="email" placeholder="Email">
+                    <input type="text" id="phone" name="phone" placeholder="Phone #">
+                    <br>
+                    <textarea id="message" name="message" placeholder="Message..." style="height:300px"></textarea>
+                </form>
+            </div>
+
+            <div class = "rightCol">
+                <div class = "contactContainer">
+                    <h3>Call Us</h3>
+                    <ul class="contactList">
+                        <li>24/7 Hotline: 1-800-712-4357</li>
+                        <br>
+                        <li>Hancock: (906) 482-8681</li>
+                        <li>L'Anse: (906) 524-2229</li>
+                    </ul>
+                </div>
+                <div class = "contactContainer">
+                    <h3>Visit Us</h3>
+                    <ul class="contactList">
+                        <li>Hancock: 300 B Quincy St. Hancock, MI</li>
+                        <li>L'Anse: 10 E. Broad St. L'Anse, MI</li>
+                    </ul>
+                </div>
+                <div class = "contactContainer">
+                    <h3>Hours</h3>
+                    &nbsp;&nbsp;&nbsp;Hancock:
+                    <ul class="contactList">
+                        <li>Monday 11:00-5:00</li>
+                        <li>Wednesday 12:00-5:00</li>
+                        <li>Thursday 12:00-5:00</li>
+                        <li>Friday 12:00-5:00</li>
+                    </ul>
+                    &nbsp;&nbsp;&nbsp;L'Anse:
+                    <ul class="contactList">
+                        <li>Tuesday 12:00-8:00</li>
+                        <li>Thursday 12:00-5:00</li>
+                    </ul>
+                </div>
+                <div class = "contactContainer">
+                    <h3>Email Us</h3>
+                    <ul class="contactList">
+                        <li>lifeoutreachhoughton@gmail.com </li>
+                        <li>lifeoutreachbaraga@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+    <%- include('includes/footer'); %>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+.splash {
+
+    background-image: url("../images/splash1.jpg");
+    height: 100vh;
+    height: calc(100vh - 70px);
+    width: 100%;
+    margin: 0;
+    margin-top: -80px;
+    padding: 0;
+    z-index: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: center cover;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.splashSlider {
+    background-image: url("../images/splash2.jpg");
+
+    display: none;
+    width: 0%;
+    height:100vh;
+    height: calc(100vh - 70px);
+    padding: 0;
+    z-index: 1;    
+    -webkit-background-size: cover;
+    -moz-background-size: center cover;
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.splashText {
+    position: absolute;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    top: 40%;
+    left: 38px;
+    font-size: 200%;
+    z-index: 2;
+
+    a:link, a:visited {
+        color: #4497e2;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: none;
+    }
+      
+    a:hover, a:active {
+        color: #7ab7ec;
+    }
+}
+
+.splashDotsContainer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+
+    text-align: center;
+
+    .splashDot {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+
+        border: 3px solid white;
+
+        cursor: pointer;
+
+        display: inline-block;
+
+        transition-property: background-color;
+        transition-duration: .6s;
+    }
+
+    .active {
+        background-color: white;
+    }
+}
+
+.splashTimerShadow {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+    
+    height: 10px;
+    width: 0%;
+    position: absolute;
+    bottom: 4px;
+    left: 0px;
+}

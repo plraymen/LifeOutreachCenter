@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <title>Information</title>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/cardToggle.js"></script>
+</head>
+
+<body>
+    <%- include('includes/header'); %>
+    <br>
+    <article class = "centered">
+        <h1 style="font-size: 32px">Information</h1>
+
+        <div class = "card-container">
+            <section class = "card collapsed" onclick="toggleCard($(this))">
+                <div class="card-image" style="background-image: url(images/information1.png);"></div>
+                <div class="card-title">Parenting Information</div>
+                <div class="card-details collapsed" onclick="cancelToggle(event)">
+                    &nbsp;&nbsp;&nbsp;
+                    Choosing to continue your pregnancy and to become a parent is a very big decision, but with the support of caring people, many women in your situation have found the necessary help and resources to not only survive, but thrive. 
+                    Click here for more information about our Earn While You Learn program which is an individualized program designed to help you prepare for parenting.  
+                    Or you are considering adoption, we can provide information about that as well.  
+                    <br>
+                    <br>
+                    Talk to us.  
+                    We want to help.
+                </div> 
+            </section>
+
+            <section class = "card collapsed" onclick="toggleCard($(this))">
+                <div class="card-image" style="background-image: url(images/information2.png);"></div>
+                <div class="card-title">Abortion Information</div>
+                <div class="card-details collapsed" onclick="cancelToggle(event)">
+                    &nbsp;&nbsp;&nbsp;Life Outreach has trained volunteers that are available to meet with you and to come alongside you in the choices you may be considering. 
+                    Are you feeling overwhelmed? 
+                    Knowing where to go for help is very important. 
+                    Please <a href="./contact.html">contact us</a>. 
+                    <br>
+                    <br>
+                    Feeling alone?  
+                    The caring people at this pregnancy center would like to be part of your support system. 
+                    We do not offer or refer for abortion services, but we have the information you need to make an informed decision.
+                </div> 
+            </section>
+
+            <section class = "card collapsed" onclick="toggleCard($(this))">
+                <div class="card-image" style="background-image: url(images/information3.png);"></div>
+                <div class="card-title">Adoption Information</div>
+                <div class="card-details collapsed" onclick="cancelToggle(event)">
+                    &nbsp;&nbsp;&nbsp;Our goal is to offer a place of non-judgmental support for you -- whether you just need someone to talk to, would like to know more about our Earn While You Learn program, or are in need of Post Abortion Support.
+                </div> 
+            </section>
+        </div>
+    </article>
+    <%- include('includes/footer'); %>
+</body>
+
+</html>

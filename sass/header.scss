@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+header {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+header {
+    .logo {
+        height: 4em;
+        background-color: $background-color-header-logo;
+        
+        color: $color-header-logo;
+        font-weight: 700;
+        font-size: 20px;
+        
+        width: 100%;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            text-align: center;
+            flex: 2 2;
+        }
+
+        .image {
+            flex: 0 0 3.5em;
+        }
+
+        img {
+            height: 3.5em;
+        }
+
+        .social {
+            font-size: 125%;
+    
+            a {
+                text-decoration: none;
+                margin: 5px;
+            }
+        }
+    }
+
+    .links {
+        height: 4em;
+        background-color: $background-color-header-links;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
+
+        a:link, a:visited {
+            background-color: $background-color-header-links;
+            color: #f1f1f1;
+            padding: 0 20px;
+            margin: 0;
+            text-align: center;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 500;
+
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          a:hover, a:active {
+            background-color: $background-color-header-link;
+          }
+    }
+}
+
+.sticky {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+}

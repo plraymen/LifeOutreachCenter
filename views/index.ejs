@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <title>Life Outreach Center</title>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/splash.js"></script>
+</head>
+
+<body>
+    <%- include('includes/header'); %>
+    <br>
+    <article class = "centered">
+        <div class = "splash" data-image="../images/splash1.png">
+            <div class = "splashSlider"></div>
+            <div class = "splashText">
+                <h2>Think You're Pregnant?</h2>
+                <h3>We are here for you</h3>
+            </div>
+            <div class = "splashDotsContainer">
+                <div class = "splashDot active" onclick="changeSplash(this)" data-number="1" data-text="<h2>Think You're Pregnant?</h2><h3>We are here for you</h3>" data-image="../images/splash1.jpg"></div>
+                <div class = "splashDot" onclick="changeSplash(this)" data-number="2" data-text="<h2>Our Services</h2><h3> are all available for free</h3>" data-image="../images/splash2.jpg"></div>
+                <div class = "splashDot" onclick="changeSplash(this)" data-number="3" data-text="<h2>Find out more information by</h2><h3><a href='tel:123-456-789'>calling</a> or <a href='contact.html'>scheduling</a> an appointment</h3>" data-image="../images/splash3.jpg"></div>
+            </div>
+
+            <div class = "splashTimerShadow"></div>
+        </div>
+        <div class = "mainHome">
+            <h2 class = "mainTitle">Afraid you're pregnant?</h2>
+            <h2 class = "mainTitle">Looking for answers?</h2>
+            <h3>You are welcome at Life Outreach Center.</h3>
+
+            <div class = "mainCols">
+                <div class="col" onclick="location.href='./services.html'">
+                    <div class="homeImage" style="background-image: url('./images/home2.jpg')"></div>
+                    <a href="./services.html">Free Services</a>
+                </div>
+
+                <div class="col" onclick="location.href='./services.html'">
+                    <div class="homeImage" style="background-image: url('./images/home1.jpg')"></div>
+                    <a href="./information.html">Information</a>
+                </div>
+
+                <div class="col" onclick="location.href='./services.html'">
+                    <div class="homeImage" style="background-image: url('./images/home3.jpg')"></div>
+                    <a href="./contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class = "mainReferral">
+            <hr>
+            <div class = "referralContainer">
+                No one should have to face an unplanned pregnancy alone.
+                <br>
+                <a href="./contact.html">We're here</a> to connect you with the support you need.
+            </div>
+            <hr>
+        </div>
+
+    </article>
+
+    <br>
+
+    <!-- Preloads Splash Images -->
+
+    <script type="text/javascript">
+    	var images = new Array()
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload(
+            "images/splash2.jpg",
+            "images/splash3.jpg"
+        );
+	</script>
+
+    <%- include('includes/footer'); %>
+</body>
+
+</html>
