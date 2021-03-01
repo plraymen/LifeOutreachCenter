@@ -5,6 +5,7 @@
 @import './splash.scss';
 @import './card.scss';
 @import './about.scss';
+@import './donate.scss';
 
 body {
     background-color: $background-color-page;
@@ -16,9 +17,27 @@ body {
     /* Flex Display for sticky header / footer */
     display:flex; 
     flex-direction:column;
+
+    overflow-x: hidden;
 }
 
-header{ 
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 420px) {
+    .mobile-hidden {
+      display: none; 
+    }
+    .mobile-break {
+        display: inline;
+    }
+    .mainText {
+        font-size: 140% !important;
+    }
+  }
+
+header { 
     min-height:8em; 
     display: block;
 }
@@ -56,6 +75,13 @@ header{
     list-style-type: none;
     list-style-image: url(../../images/bullet.png);
     font-size: 120%;
+
+    a {
+        margin: auto;
+        padding: auto;
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 .contactList li {
@@ -93,6 +119,7 @@ header{
     .col {
         margin: 1em 2em;
         cursor: pointer;
+        text-align: center;
 
         .homeImage {
             width: 300px;
@@ -126,6 +153,34 @@ header{
     }
 }
 
+.main-break {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+	.mainCols {
+        display: block;
+        margin: 0;
+       
+        .homeImage {
+            display: inline-block !important;
+        }
+	}
+
+    .main-break {
+        display: inline;
+    }
+}
+
+@media (max-width: 400px) {
+	.mainCols {
+        .homeImage {
+            width: 240px !important;
+            height: 240px !important;
+        }
+	}
+}
+
 .mainReferral {
     font-size: 30px;
     margin: 32px 6px;
@@ -151,4 +206,25 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(68, 151, 226, 0), rgba(68, 151, 226, 0.75), rgba(68, 151, 226, 0));
+}
+
+/* Responsively converts from two columns to rows. */
+@media (max-width: 526px) {
+	.cols {
+		display: block;
+	}
+	.leftCol {
+        border: none;
+        padding-right: 1em;
+    }
+    .rightCol {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .contactList {
+        list-style-image: none;
+        padding: 0;
+        margin: 0;
+    }
 }

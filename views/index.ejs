@@ -8,6 +8,8 @@
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Life Outreach Center</title>
 
     <script src="scripts/jquery.js"></script>
@@ -28,29 +30,32 @@
             <div class = "splashDotsContainer">
                 <div class = "splashDot active" onclick="changeSplash(this)" data-number="1" data-text="<h2>Think You're Pregnant?</h2><h3>We are here for you</h3>" data-image="../images/splash1.jpg"></div>
                 <div class = "splashDot" onclick="changeSplash(this)" data-number="2" data-text="<h2>Our Services</h2><h3> are all available for free</h3>" data-image="../images/splash2.jpg"></div>
-                <div class = "splashDot" onclick="changeSplash(this)" data-number="3" data-text="<h2>Find out more information by</h2><h3><a href='tel:123-456-789'>calling</a> or <a href='contact.html'>scheduling</a> an appointment</h3>" data-image="../images/splash3.jpg"></div>
+                <div class = "splashDot" onclick="changeSplash(this)" data-number="3" data-text="<h2 class='mobile-hidden'>Find out more information</h2><h3><a href='tel:123-456-789'>Call</a> or <a href='contact.html'>Schedule</a> an appointment</h3>" data-image="../images/splash3.jpg"></div>
             </div>
 
             <div class = "splashTimerShadow"></div>
         </div>
         <div class = "mainHome">
-            <h2 class = "mainTitle">Afraid you're pregnant?</h2>
-            <h2 class = "mainTitle">Looking for answers?</h2>
-            <h3>You are welcome at Life Outreach Center.</h3>
+            <h2 class = "mainTitle mainText">Afraid you're pregnant?</h2>
+            <h2 class = "mainTitle mainText">Looking for answers?</h2>
+            <h3 class = "mainText">You are welcome at Life Outreach Center.</h3>
 
             <div class = "mainCols">
                 <div class="col" onclick="location.href='./services.html'">
                     <div class="homeImage" style="background-image: url('./images/home2.jpg')"></div>
+                    <span class="main-break"><br></span>
                     <a href="./services.html">Free Services</a>
                 </div>
 
                 <div class="col" onclick="location.href='./services.html'">
                     <div class="homeImage" style="background-image: url('./images/home1.jpg')"></div>
+                    <span class="main-break"><br></span>
                     <a href="./information.html">Information</a>
                 </div>
 
                 <div class="col" onclick="location.href='./services.html'">
                     <div class="homeImage" style="background-image: url('./images/home3.jpg')"></div>
+                    <span class="main-break"><br></span>
                     <a href="./contact.html">Contact Us</a>
                 </div>
             </div>

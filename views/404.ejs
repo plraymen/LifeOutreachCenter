@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>404 Not Found</title>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/header.js"></script>
+</head>
+
+<body>
+    <%- include('includes/header'); %>
+    <br>
+    <article class = "centered">
+        <div class="about">
+            <h2 class = "centered">404 Error</h2>
+            <h3 class = "centered">Page not found</h3>
+            
+            <p class= "centered">
+                The page you were looking for could not be found. Please check the URL, or go <a href="./index.html">Home</a>.     
+            </p>
+        </div>
+    </article>
+    <%- include('includes/footer'); %>
+</body>
+
+</html>

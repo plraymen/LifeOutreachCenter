@@ -4,9 +4,10 @@ header {
     padding: 0;
     margin: 0;
     z-index: 1;
+    width: 100%;
 }
 
-header {
+.header-desktop {
     .logo {
         height: 4em;
         background-color: $background-color-header-logo;
@@ -77,6 +78,81 @@ header {
             background-color: $background-color-header-link;
           }
     }
+}
+
+.header-mobile {
+    display: none;
+    width: 100vw;
+
+    .logo {
+        height: 4em;
+        background-color: $background-color-header-logo;
+        
+        color: $color-header-logo;
+        font-weight: 700;
+        font-size: 20px;
+        
+        width: 100vw;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image {
+            flex: 0 0 3.5em;
+        }
+
+        img {
+            height: 3.5em;
+        }
+    }
+
+    .links {
+        min-height: 4em;
+
+        background-color: $background-color-header-links;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
+
+        a:link, a:visited {
+            background-color: $background-color-header-links;
+            color: #f1f1f1;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 500;
+
+            width: 100vw;
+            height: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          a:hover, a:active {
+            background-color: $background-color-header-link;
+          }
+    }
+}
+
+/* Responsively hides the standard navbar, and replaces it with the mobile navbar. */
+@media (max-width: 713px) {
+	.header-desktop {
+		display: none !important;
+	}
+	.header-mobile {
+		display: block !important;
+	}
 }
 
 .sticky {

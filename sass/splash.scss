@@ -1,5 +1,4 @@
 .splash {
-
     background-image: url("../images/splash1.jpg");
     height: 100vh;
     height: calc(100vh - 70px);
@@ -39,7 +38,7 @@
     position: absolute;
     color: white;
     text-shadow: 0px 0px 4px black;
-    top: 40%;
+    top: 35%;
     left: 38px;
     font-size: 200%;
     z-index: 2;
@@ -54,6 +53,20 @@
     a:hover, a:active {
         color: #7ab7ec;
     }
+}
+
+@media (max-width: 713px) {
+	.splashText {
+		top: 20%;
+        left: 30px;
+        margin-right: 15px;
+	}
+}
+
+@media (max-height: 500px) {
+	.splashText {
+        font-size: 140%;
+	}
 }
 
 .splashDotsContainer {

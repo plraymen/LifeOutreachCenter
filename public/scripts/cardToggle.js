@@ -31,3 +31,23 @@ function toggleCard(element) {
 function cancelToggle(event) {
     event.stopPropagation();
 }
+
+// Gets variables in url, and jumps to content if needed.
+$(document).ready(function() {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+
+    var cardTitle = urlParams.get("card");
+
+    var titles = document.querySelectorAll(".card-title");
+
+    if (cardTitle) {
+        console.log("Card title is " + cardTitle);
+
+        for (var i = 0; i < titles.length; i++) {
+            if (titles[i].innerHTML == cardTitle) {
+                toggleCard($(titles[i].parentElement));
+            }
+        }
+    }
+});

@@ -20,3 +20,15 @@ window.onscroll = function () {
         scrollPoint = window.scrollY;
     }
 };
+
+menuOpen = false;
+
+function toggleMobileNav() {
+    if (menuOpen) {
+        $(".mobile-nav-container").slideUp();
+        menuOpen = false;
+    } else {
+        $(".mobile-nav-container").slideDown();
+        menuOpen = true;
+    }
+}

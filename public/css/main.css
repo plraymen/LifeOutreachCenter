@@ -2,9 +2,10 @@ header {
   padding: 0;
   margin: 0;
   z-index: 1;
+  width: 100%;
 }
 
-header .logo {
+.header-desktop .logo {
   height: 4em;
   background-color: #FEFEFE;
   color: #000080;
@@ -16,24 +17,24 @@ header .logo {
   align-items: center;
   justify-content: center;
 }
-header .logo div {
+.header-desktop .logo div {
   text-align: center;
   flex: 2 2;
 }
-header .logo .image {
+.header-desktop .logo .image {
   flex: 0 0 3.5em;
 }
-header .logo img {
+.header-desktop .logo img {
   height: 3.5em;
 }
-header .logo .social {
+.header-desktop .logo .social {
   font-size: 125%;
 }
-header .logo .social a {
+.header-desktop .logo .social a {
   text-decoration: none;
   margin: 5px;
 }
-header .links {
+.header-desktop .links {
   height: 4em;
   background-color: #09abeb;
   width: 100%;
@@ -44,7 +45,7 @@ header .links {
   justify-content: center;
   box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
 }
-header .links a:link, header .links a:visited {
+.header-desktop .links a:link, .header-desktop .links a:visited {
   background-color: #09abeb;
   color: #f1f1f1;
   padding: 0 20px;
@@ -58,10 +59,73 @@ header .links a:link, header .links a:visited {
   align-items: center;
   justify-content: center;
 }
-header .links a:hover, header .links a:active {
+.header-desktop .links a:hover, .header-desktop .links a:active {
   background-color: #04688f;
 }
 
+.header-mobile {
+  display: none;
+  width: 100vw;
+}
+.header-mobile .logo {
+  height: 4em;
+  background-color: #FEFEFE;
+  color: #000080;
+  font-weight: 700;
+  font-size: 20px;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-mobile .logo .image {
+  flex: 0 0 3.5em;
+}
+.header-mobile .logo img {
+  height: 3.5em;
+}
+.header-mobile .links {
+  min-height: 4em;
+  background-color: #09abeb;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
+}
+.header-mobile .links a:link, .header-mobile .links a:visited {
+  background-color: #09abeb;
+  color: #f1f1f1;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 500;
+  width: 100vw;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-mobile .links a:hover, .header-mobile .links a:active {
+  background-color: #04688f;
+}
+
+/* Responsively hides the standard navbar, and replaces it with the mobile navbar. */
+@media (max-width: 713px) {
+  .header-desktop {
+    display: none !important;
+  }
+
+  .header-mobile {
+    display: block !important;
+  }
+}
 .sticky {
   position: fixed;
   top: 0px;
@@ -258,6 +322,11 @@ footer .fa {
   font-size: 150%;
 }
 
+@media (max-width: 400px) {
+  footer {
+    min-height: 12.5em;
+  }
+}
 .splash {
   background-image: url("../images/splash1.jpg");
   height: 100vh;
@@ -295,7 +364,7 @@ footer .fa {
   position: absolute;
   color: white;
   text-shadow: 0px 0px 4px black;
-  top: 40%;
+  top: 35%;
   left: 38px;
   font-size: 200%;
   z-index: 2;
@@ -310,6 +379,18 @@ footer .fa {
   color: #7ab7ec;
 }
 
+@media (max-width: 713px) {
+  .splashText {
+    top: 20%;
+    left: 30px;
+    margin-right: 15px;
+  }
+}
+@media (max-height: 500px) {
+  .splashText {
+    font-size: 140%;
+  }
+}
 .splashDotsContainer {
   width: 100%;
   position: absolute;
@@ -351,25 +432,26 @@ footer .fa {
 }
 .card-image {
   display: inline-block;
-  width: 240px;
-  height: 240px;
+  width: 226px;
+  height: 226px;
   border-radius: 30%;
+  border: 2px solid #0645AD;
 }
 .card-title {
-  font-size: 25px;
+  font-size: 28px;
   margin: 5px;
 }
 .card-details.collapsed::after {
   content: "Learn More";
   color: #0645AD;
   text-decoration: underline;
-  font-size: 18px;
+  font-size: 20px;
 }
 .card-details.collapsed {
   font-size: 0px;
 }
 .card-details.expanded {
-  font-size: 20px;
+  font-size: 23px;
   /* background-color: #d3e9fa; */
   width: 80%;
   border-radius: 15px;
@@ -389,9 +471,19 @@ footer .fa {
 .card-details.expanded a:hover {
   color: #79bdf8;
 }
+.card ul {
+  color: #4497e2;
+  list-style-type: bullet;
+}
+.card li {
+  margin: 9px 0;
+}
 
 .card.collapsed:hover {
   top: -5px;
+}
+.card.collapsed li {
+  margin: 0;
 }
 
 .card.expanded {
@@ -427,6 +519,28 @@ footer .fa {
 .about .disclaimer {
   font-size: 70%;
 }
+.about a:link, .about a:visited {
+  color: #4497e2;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+}
+.about a:hover, .about a:active {
+  color: #7ab7ec;
+}
+
+.donate .card-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donate a:link, .donate a:visited {
+  color: #4497e2;
+  text-decoration: none;
+}
+.donate a:hover, .donate a:active {
+  color: #7ab7ec;
+}
 
 body {
   background-color: #FEFEFE;
@@ -437,8 +551,26 @@ body {
   /* Flex Display for sticky header / footer */
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .mobile-break {
+    display: inline;
+  }
+
+  .mainText {
+    font-size: 140% !important;
+  }
+}
 header {
   min-height: 8em;
   display: block;
@@ -479,6 +611,12 @@ header {
   list-style-image: url(../../images/bullet.png);
   font-size: 120%;
 }
+.contactList a {
+  margin: auto;
+  padding: auto;
+  text-decoration: none;
+  color: inherit;
+}
 
 .contactList li {
   margin: 9px 0;
@@ -513,6 +651,7 @@ header {
 .mainCols .col {
   margin: 1em 2em;
   cursor: pointer;
+  text-align: center;
 }
 .mainCols .col .homeImage {
   width: 300px;
@@ -539,6 +678,29 @@ header {
   margin: 0.25em 2em;
 }
 
+.main-break {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .mainCols {
+    display: block;
+    margin: 0;
+  }
+  .mainCols .homeImage {
+    display: inline-block !important;
+  }
+
+  .main-break {
+    display: inline;
+  }
+}
+@media (max-width: 400px) {
+  .mainCols .homeImage {
+    width: 240px !important;
+    height: 240px !important;
+  }
+}
 .mainReferral {
   font-size: 30px;
   margin: 32px 6px;
@@ -561,4 +723,28 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(68, 151, 226, 0), rgba(68, 151, 226, 0.75), rgba(68, 151, 226, 0));
+}
+
+/* Responsively converts from two columns to rows. */
+@media (max-width: 526px) {
+  .cols {
+    display: block;
+  }
+
+  .leftCol {
+    border: none;
+    padding-right: 1em;
+  }
+
+  .rightCol {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactList {
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
+  }
 }

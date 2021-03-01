@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Contact</title>
 
     <script src="scripts/jquery.js"></script>
@@ -21,12 +23,15 @@
             <div class = "leftCol centered">
                 <h2>Contact Us</h2>
                 <br>
-                <form style = "text-align: center;">
+                <form style = "text-align: center;"  action="/send-message" method="POST">
                     <input type="text" id="name" name="name" placeholder="Name">
                     <input type="text" id="email" name="email" placeholder="Email">
                     <input type="text" id="phone" name="phone" placeholder="Phone #">
                     <br>
                     <textarea id="message" name="message" placeholder="Message..." style="height:300px"></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" class="submitButton">
                 </form>
             </div>
 
@@ -34,17 +39,17 @@
                 <div class = "contactContainer">
                     <h3>Call Us</h3>
                     <ul class="contactList">
-                        <li>24/7 Hotline: 1-800-712-4357</li>
+                        <li><a href="tel:+18007124357">24/7 Hotline: 1-800-712-4357</a></li>
                         <br>
-                        <li>Hancock: (906) 482-8681</li>
-                        <li>L'Anse: (906) 524-2229</li>
+                        <li><a href="tel:+9064828681">Hancock: (906) 482-8681</a></li>
+                        <li><a href="tel:+9065242229">L'Anse: (906) 524-2229</a></li>
                     </ul>
                 </div>
                 <div class = "contactContainer">
                     <h3>Visit Us</h3>
                     <ul class="contactList">
-                        <li>Hancock: 300 B Quincy St. Hancock, MI</li>
-                        <li>L'Anse: 10 E. Broad St. L'Anse, MI</li>
+                        <li><a href="https://goo.gl/maps/NynEXYiY6Tuh2Wsq7">Hancock: 300 B Quincy St. Hancock, MI</a></li>
+                        <li><a href="https://goo.gl/maps/8YouygkAHKgB3LzY7">L'Anse: 10 E. Broad St. L'Anse, MI</a></li>
                     </ul>
                 </div>
                 <div class = "contactContainer">
@@ -65,8 +70,8 @@
                 <div class = "contactContainer">
                     <h3>Email Us</h3>
                     <ul class="contactList">
-                        <li>lifeoutreachhoughton@gmail.com </li>
-                        <li>lifeoutreachbaraga@gmail.com</li>
+                        <li><a href="mailto:lifeoutreachhoughton@gmail.com">lifeoutreachhoughton@gmail.com</a></li>
+                        <li><a href="mailto:lifeoutreachbaraga@gmail.com">lifeoutreachbaraga@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
