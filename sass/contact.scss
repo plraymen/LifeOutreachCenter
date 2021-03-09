@@ -1,0 +1,25 @@
+.contactList {
+    color: $color-secondary;
+    list-style-type: none;
+    list-style-image: url(../../images/bullet.png);
+    font-size: 120%;
+
+    a {
+        margin: auto;
+        padding: auto;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.contactList li {
+    margin: 9px 0;
+}
+
+@media (max-width: 526px) {
+    .contactList {
+        list-style-image: none;
+        padding: 0;
+        margin: 0;
+    }
+}

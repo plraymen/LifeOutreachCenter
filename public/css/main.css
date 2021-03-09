@@ -370,13 +370,9 @@ footer .fa {
   z-index: 2;
 }
 .splashText a:link, .splashText a:visited {
-  color: #4497e2;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
-}
-.splashText a:hover, .splashText a:active {
-  color: #7ab7ec;
 }
 
 @media (max-width: 713px) {
@@ -462,14 +458,7 @@ footer .fa {
   animation: 1s slidedown;
 }
 .card-details.expanded a {
-  color: #4497e2;
   text-decoration: none;
-}
-.card-details.expanded a:visited {
-  color: #4497e2;
-}
-.card-details.expanded a:hover {
-  color: #79bdf8;
 }
 .card ul {
   color: #4497e2;
@@ -506,6 +495,12 @@ footer .fa {
     transform: scaleY(1);
   }
 }
+@media (max-width: 400px) {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .about {
   text-align: left;
   margin: 20px;
@@ -519,29 +514,79 @@ footer .fa {
 .about .disclaimer {
   font-size: 70%;
 }
-.about a:link, .about a:visited {
-  color: #4497e2;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: none;
-}
-.about a:hover, .about a:active {
-  color: #7ab7ec;
-}
 
 .donate .card-list {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.donate a:link, .donate a:visited {
+
+.contactList {
   color: #4497e2;
-  text-decoration: none;
+  list-style-type: none;
+  list-style-image: url(../../images/bullet.png);
+  font-size: 120%;
 }
-.donate a:hover, .donate a:active {
-  color: #7ab7ec;
+.contactList a {
+  margin: auto;
+  padding: auto;
+  text-decoration: none;
+  color: inherit;
 }
 
+.contactList li {
+  margin: 9px 0;
+}
+
+@media (max-width: 526px) {
+  .contactList {
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Column Data */
+.cols {
+  display: inline-grid;
+  grid-template-columns: 15fr 475px;
+  grid-gap: 1rem;
+  margin: 1rem;
+  box-sizing: border-box;
+  color: #010101;
+  /* $color-secondary */
+  font-size: 120%;
+  justify-items: center;
+  box-sizing: border-box;
+}
+
+.leftCol {
+  padding: 1em;
+  border-right: 1px solid #79b8c9;
+}
+
+.rightCol {
+  width: 100%;
+  text-align: left;
+  padding: 1em 3em;
+}
+
+/* Responsively converts from two columns to rows. */
+@media (max-width: 526px) {
+  .cols {
+    display: block;
+  }
+
+  .leftCol {
+    border: none;
+    padding-right: 1em;
+  }
+
+  .rightCol {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+}
 body {
   background-color: #FEFEFE;
   height: 100vh;
@@ -552,6 +597,17 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+}
+
+a:link, a:visited {
+  color: #4497e2;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+a:hover, a:active {
+  color: #7ab7ec;
 }
 
 .mobile-break {
@@ -578,48 +634,6 @@ header {
 
 .centered {
   text-align: center;
-}
-
-/* Column Data */
-.cols {
-  display: inline-grid;
-  grid-template-columns: 15fr 475px;
-  grid-gap: 1rem;
-  margin: 1rem;
-  box-sizing: border-box;
-  color: #010101;
-  /* #4497e2 */
-  font-size: 120%;
-  justify-items: center;
-  box-sizing: border-box;
-}
-
-.leftCol {
-  padding: 1em;
-  border-right: 1px solid #79b8c9;
-}
-
-.rightCol {
-  width: 100%;
-  text-align: left;
-  padding: 1em 3em;
-}
-
-.contactList {
-  color: #4497e2;
-  list-style-type: none;
-  list-style-image: url(../../images/bullet.png);
-  font-size: 120%;
-}
-.contactList a {
-  margin: auto;
-  padding: auto;
-  text-decoration: none;
-  color: inherit;
-}
-
-.contactList li {
-  margin: 9px 0;
 }
 
 .mainHome {
@@ -664,15 +678,10 @@ header {
   border-radius: 10%;
 }
 .mainCols .col a:link, .mainCols .col a:visited {
-  color: #4497e2;
   margin: 1em;
   text-align: center;
-  text-decoration: none;
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 500;
-}
-.mainCols .col a:hover, .mainCols .col a:active {
-  color: #7ab7ec;
 }
 .mainCols .col:hover {
   margin: 0.25em 2em;
@@ -700,6 +709,10 @@ header {
     width: 240px !important;
     height: 240px !important;
   }
+  .mainCols .col {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .mainReferral {
   font-size: 30px;
@@ -709,13 +722,9 @@ header {
   margin: 60px 40px;
 }
 .mainReferral a:link, .mainReferral a:visited {
-  color: #4497e2;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
-}
-.mainReferral a:hover, .mainReferral a:active {
-  color: #7ab7ec;
 }
 
 hr {
@@ -723,28 +732,4 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(68, 151, 226, 0), rgba(68, 151, 226, 0.75), rgba(68, 151, 226, 0));
-}
-
-/* Responsively converts from two columns to rows. */
-@media (max-width: 526px) {
-  .cols {
-    display: block;
-  }
-
-  .leftCol {
-    border: none;
-    padding-right: 1em;
-  }
-
-  .rightCol {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
-
-  .contactList {
-    list-style-image: none;
-    padding: 0;
-    margin: 0;
-  }
 }

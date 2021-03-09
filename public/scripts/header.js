@@ -1,27 +1,28 @@
-
 var scrollPoint = 260;
 var scrollStart = 260;
 
 // Scroll event handler handle sticky header.
 window.onscroll = function () {
-	if (window.scrollY > 80) {
-        //$(".logo").slideUp();
-        $(".links").addClass("sticky");
-	} else {
-        //$(".logo").slideDown();
-        $(".links").removeClass("sticky");
+    // Hides the header when scrolling on desktop.
+	if (window.innerWidth >= 713) {
+        if (window.scrollY > scrollPoint && window.scrollY > scrollStart) {
+            $(".links").slideUp();
+            scrollPoint = window.scrollY;
+        } else {
+            $(".links").slideDown();
+            scrollPoint = window.scrollY;
+        }
     }
 
-    if (window.scrollY > scrollPoint && window.scrollY > scrollStart) {
-        $(".links").slideUp();
-        scrollPoint = window.scrollY;
+    // Anchors the link header to top of screen when past the logo.
+    if (window.scrollY > 80) {
+        $(".links").addClass("sticky");
     } else {
-        $(".links").slideDown();
-        scrollPoint = window.scrollY;
+        $(".links").removeClass("sticky");
     }
 };
 
-menuOpen = false;
+var menuOpen = false;
 
 function toggleMobileNav() {
     if (menuOpen) {

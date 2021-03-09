@@ -1,0 +1,39 @@
+/* Column Data */
+.cols {
+    display: inline-grid;
+    grid-template-columns: 15fr 475px;
+    grid-gap: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    color: #010101; /* $color-secondary */
+    font-size: 120%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.leftCol {
+    padding: 1em;
+    border-right: 1px solid #79b8c9; 
+}
+
+.rightCol {
+    width: 100%;
+    text-align: left;
+    padding: 1em 3em;
+}
+
+/* Responsively converts from two columns to rows. */
+@media (max-width: 526px) {
+	.cols {
+		display: block;
+	}
+	.leftCol {
+        border: none;
+        padding-right: 1em;
+    }
+    .rightCol {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+}

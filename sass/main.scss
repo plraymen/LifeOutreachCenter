@@ -6,6 +6,8 @@
 @import './card.scss';
 @import './about.scss';
 @import './donate.scss';
+@import './contact.scss';
+@import './columns.scss';
 
 body {
     background-color: $background-color-page;
@@ -19,6 +21,17 @@ body {
     flex-direction:column;
 
     overflow-x: hidden;
+}
+
+a:link, a:visited {
+    color: $color-secondary;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+}
+  
+a:hover, a:active {
+    color: $color-secondary-hover;
 }
 
 .mobile-break {
@@ -46,53 +59,12 @@ header {
     text-align: center;
 }
 
-/* Column Data */
-.cols {
-    display: inline-grid;
-    grid-template-columns: 15fr 475px;
-    grid-gap: 1rem;
-    margin: 1rem;
-    box-sizing: border-box;
-    color: #010101; /* #4497e2 */
-    font-size: 120%;
-    justify-items: center;
-    box-sizing: border-box;
-}
-
-.leftCol {
-    padding: 1em;
-    border-right: 1px solid #79b8c9; 
-}
-
-.rightCol {
-    width: 100%;
-    text-align: left;
-    padding: 1em 3em;
-}
-
-.contactList {
-    color: #4497e2;
-    list-style-type: none;
-    list-style-image: url(../../images/bullet.png);
-    font-size: 120%;
-
-    a {
-        margin: auto;
-        padding: auto;
-        text-decoration: none;
-        color: inherit;
-    }
-}
-
-.contactList li {
-    margin: 9px 0;
-}
 
 .mainHome {
     width: 100%;
     margin: 0;
     background-color: #FFFFFF;
-    color: #4497e2;
+    color: $color-secondary;
     
     .mainTitle {
         font-size: 58px;
@@ -135,16 +107,10 @@ header {
         }
 
         a:link, a:visited {
-            color: #4497e2;
             margin: 1em;
             text-align: center;
-            text-decoration: none;
-            font-size: 19px;
+            font-size: 25px;
             font-weight: 500;
-          }
-          
-          a:hover, a:active {
-            color: #7ab7ec;
           }
     }
 
@@ -178,7 +144,14 @@ header {
             width: 240px !important;
             height: 240px !important;
         }
+
+        .col {
+            margin-left: auto;
+            margin-right: auto;
+        }
 	}
+
+
 }
 
 .mainReferral {
@@ -190,14 +163,9 @@ header {
     }
 
     a:link, a:visited {
-        color: #4497e2;
         text-align: center;
         text-decoration: none;
         font-weight: 500;
-    }
-      
-    a:hover, a:active {
-        color: #7ab7ec;
     }
 }
 
@@ -206,25 +174,4 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(68, 151, 226, 0), rgba(68, 151, 226, 0.75), rgba(68, 151, 226, 0));
-}
-
-/* Responsively converts from two columns to rows. */
-@media (max-width: 526px) {
-	.cols {
-		display: block;
-	}
-	.leftCol {
-        border: none;
-        padding-right: 1em;
-    }
-    .rightCol {
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-    .contactList {
-        list-style-image: none;
-        padding: 0;
-        margin: 0;
-    }
 }

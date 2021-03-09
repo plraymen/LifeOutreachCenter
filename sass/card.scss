@@ -39,22 +39,13 @@
             animation: 1s slidedown;
 
             a {
-                color: #4497e2;
                 text-decoration: none;
-            }
-
-            a:visited {
-                color: #4497e2
-            }
-
-            a:hover {
-                color: #79bdf8;
             }
         }
     }
 
     ul {
-        color: #4497e2;
+        color: $color-secondary;
         list-style-type: bullet;
     }
 
@@ -89,4 +80,11 @@
 @keyframes slidedown {
     from { transform: scaleY(0); }
     to   { transform: scaleY(1); }
+}
+
+@media (max-width: 400px) {
+	.card {
+       margin-left: auto;
+       margin-right: auto;
+	}
 }
