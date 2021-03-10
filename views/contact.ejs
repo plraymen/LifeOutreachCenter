@@ -26,11 +26,11 @@
                     <p>
                         <%= message ? message : '' %>
                     </p>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    <input type="text" id="email" name="email" placeholder="Email">
-                    <input type="text" id="phone" name="phone" placeholder="Phone #">
+                    <input type="text" id="name" name="name" placeholder="Name" value="<%= responses.name ? responses.name : '' %>">
+                    <input type="text" id="email" name="email" placeholder="Email" value="<%= responses.email ? responses.email : '' %>">
+                    <input type="text" id="phone" name="phone" placeholder="Phone #" value="<%= responses.phone ? responses.phone : '' %>">
                     <br>
-                    <textarea id="message" name="message" placeholder="Message..." style="height:300px"></textarea>
+                    <textarea id="message" name="message" placeholder="Message..." style="height:300px"><%= responses.message ? responses.message : '' %></textarea>
                     <br>
                     <br>
                     <input type="submit" class="submitButton">
